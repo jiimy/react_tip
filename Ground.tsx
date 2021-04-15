@@ -23,3 +23,28 @@ type Type = {
 
 // 3. 넘기기
 onClick={()=> cli()}
+
+// 토글 
+const [listView, listViewSet] = useState(-1);
+const Toggle = (i: number) => {
+	listViewSet(i);
+	listView == i ? listViewSet(-1) : listViewSet(i);
+};
+<div
+	className={classnames(
+		"view-title",
+		listView == index ? "is-open" : ""
+	)}
+	onClick={() => Toggle(index)}
+>
+	<span className="icon">Q</span>
+	<span className="view-title__text">
+		{FaqData[index]["btitle"]}
+	</span>
+	<span
+		className={classnames(
+			"icon-close",
+			listView == index ? "is-show" : ""
+		)}
+	></span>
+</div>
