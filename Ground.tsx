@@ -13,7 +13,7 @@ console.log(pageNum);
 
 <!-- 2. 자식 - 타입 받기 -->
 type Type = {
-  cli = (value: number) => void 
+  cli : (value: number) => void 
 }
 
 컴포넌트 = ({
@@ -22,8 +22,8 @@ type Type = {
 }
 
 // 3. 넘기기
-onClick={()=> cli()}
-
+onClick={()=> cli(1)}
+//ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 // 토글 
 const [listView, listViewSet] = useState(-1);
 const Toggle = (i: number) => {
