@@ -1,0 +1,28 @@
+@function svgIcon($color, $name) {
+  $color: '';
+  @if ($color: 000) {
+    $color: 'black'
+  } @else {
+    $color: '%23'+$color;
+  }
+  $icon: '';
+  @if($name == 'chk') {
+    $icon: "data: image/svg+xml, %3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg' %3E%3Cpath d='M5.16682 9.90906L8.67111 13.4132L16.0002 6.08398' stroke='#{$color}' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' /%3E%3C/svg%3E%0A";
+  }
+  @if($name == 'arrow') {
+    $icon: "data: image/svg+xml, %3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg' %3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.68061 7.10643C2.89771 6.83807 3.29125 6.79651 3.55961 7.01361L9.99986 12.2236L16.4403 7.0136C16.7086 6.79651 17.1022 6.83807 17.3193 7.10644C17.5364 7.3748 17.4948 7.76834 17.2264 7.98543L10.655 13.3014C10.2729 13.6105 9.72679 13.6105 9.34472 13.3014L2.77344 7.98543C2.50508 7.76833 2.46352 7.37479 2.68061 7.10643Z' fill='#{$color}' /%3E%3C/svg%3E"
+  }
+  @if($name == 'rightArrow') {
+    $icon: "data: image/svg+xml, %3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg' %3E%3Cpath d='M4.66667 2.04102L9.27145 6.6458C9.46671 6.84106 9.46671 7.15764 9.27145 7.3529L4.66667 11.9577' stroke='#{$color}' stroke-width='1.5' stroke-linecap='round' /%3E%3C/svg%3E%0A"
+  }
+  @if($name =='barcode') {
+    $icon: "data: image/svg+xml, %3Csvg width='24' height='25' viewBox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg' %3E%3Cpath d='M3.5 6.5V18.5' stroke='#{$color}' stroke-width='1.5' stroke-linecap='round' /%3E%3Cpath d='M6 18.5V6.5H8.5V18.5H6Z' fill='#{$color}' stroke='#{$color}' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' /%3E%3Cpath d='M16 6.5V18.5' stroke='#{$color}' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' /%3E%3Cpath d='M19.5 18.5V6.5H21V18.5H19.5Z' fill='#{$color}' stroke='#{$color}' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' /%3E%3Cpath d='M12 18.5V6.5H13V18.5H12Z' stroke='#{$color}' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' /%3E%3C/svg%3E%0A"
+  }
+
+  @return url($icon);
+}
+
+https://yoksel.github.io/url-encoder/
+
+
+background: svgIcon(FB5353, 'rightArrow') no-repeat;
