@@ -29,3 +29,10 @@
     window.addEventListener('resize', () => setScreenSize());
     // window.addEventListener('resize', () => setMedia());
   }
+
+// 배열에서 중복 제거
+const dupArr = [1, 2, 3, 1, 2];
+
+const uniqueArr = dupArr.filter((element, index) => {
+    return dupArr.indexOf(element) === index;
+});
