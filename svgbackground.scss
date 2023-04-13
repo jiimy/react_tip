@@ -1,11 +1,12 @@
 @function svgIcon($color, $name) {
-  $color: '';
-  @if ($color: 000) {
-    $color: 'black'
+  $colors: '';
+  @if ($color == 000) {
+    $colors: black
   } @else {
-    $color: '%23'+$color;
+			$colors: '%23#{$color}';
   }
   $icon: '';
+  
   @if($name == 'chk') {
     $icon: "data: image/svg+xml, %3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg' %3E%3Cpath d='M5.16682 9.90906L8.67111 13.4132L16.0002 6.08398' stroke='#{$color}' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' /%3E%3C/svg%3E%0A";
   }
@@ -25,4 +26,9 @@
 https://yoksel.github.io/url-encoder/
 
 
-background: svgIcon(FB5353, 'rightArrow') no-repeat;
+	div {
+		width: 100px;
+		height: 100px;
+		background: svgIcon(002c5f,'rightArrow') no-repeat;
+		background-size: 100px 100px;
+	}
