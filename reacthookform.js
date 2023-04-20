@@ -4,6 +4,7 @@ import "./styles.css";
 
 // 훅폼 기본형?
 export default function App() {
+  // useForm({ mode: "onChange" });
   const { register, handleSubmit, errors } = useForm();
   const onSubmit = (data) => {
     console.log(data);
